@@ -1,0 +1,62 @@
+import cv2 as c
+import numpy as np
+import sqlite3
+import os
+def insertOrUpdate(id, name):
+    conn = sqlite3.connect("C:/Users/utplu/Desktop/DoAnTN/dataset.db")
+    query = "SELECT * FROM people WHERE ID ="+ str(id)
+    cusror = conn.execute(query)
+
+    isRecordExist = 0
+    for row in cusror:
+        isRecordExist = 1
+        
+    if (isRecordExist == 0):
+        query = "INSERT INTO people(ID, Name) VALUES("+str(id)+",'"+ str(name)+"')"
+    else :
+        query = "UPDATE people SET Name='"+ str(name)+"' WHERE ID"+str(id)
+    conn.execute(query)
+    conn.commit()
+    conn.close()
+    
+#load thu vien
+fcc = c.CascadeClassifier("C:/Users/utplu/Desktop/DoAnTN/f.xml")
+
+cap = c.VideoCapture(0)
+
+#insert DTB
+id = input ("Enter your ID: ")
+name = input ("Enter your name: ")
+insertOrUpdate(id, name)
+
+
+sampleNum = 0
+
+
+while(True):
+    ret, f = cap.read()
+
+    gray = c.cvtColor(f, c.COLOR_BGR2GRAY)
+
+    pg = c.cvtColor(f, c.COLOR_BGR2GRAY)
+    faces = fcc.detectMultiScale(
+        pg,
+        scaleFactor=1.5,
+        minNeighbors=5,
+        minSize=(64, 64),
+        flags=c.CASCADE_SCALE_IMAGE
+        )
+    for (x, y, w, h) in faces:
+        anh_cat = gray[y: y+h, x: x + w]
+        c.rectangle(f, (x, y), (x + w, y + h),(0, 255, 0), 2)
+        if not os.path.exists('dataSet'):
+            os.makedirs('dataSet')
+        sampleNum += 1   
+        c.imwrite('dataSet/User.' + str(id)+'.' + str(sampleNum)+'.jpg', anh_cat)
+    c.imshow('frame', f)
+    c.waitKey(1)
+    if sampleNum > 400:
+        break;
+cap.release()
+c.destroyAllWindows()
+            
