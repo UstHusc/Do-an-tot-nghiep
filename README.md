@@ -17,4 +17,4 @@ Các bước thực hiện:
  
  
  
- contact me at: utplutoa1@gmail.com
+ contact: utplutoa1@gmail.com
