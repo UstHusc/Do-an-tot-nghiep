@@ -13,3 +13,8 @@ Các bước thực hiện:
 2)	Tách, phân loại và đặt tên các danh mục cho dữ liệu lấy từ CSDL vừa thu thập được trong tệp “DataSet”
 3)	Chạy code đào tạo. Sau khi đào tạo hoàn tất và lưu mô hình vào file .h5 thì chạy code nhận diện.
  Lưu ý: cần đảm bảo đường dẫn file .h5 phải chính xác.
+ 
+ 
+ 
+ 
+ contact me at: utplutoa1@gmail.com
