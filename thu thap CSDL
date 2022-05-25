@@ -3,7 +3,7 @@ import numpy as np
 import sqlite3
 import os
 def insertOrUpdate(id, name):
-    conn = sqlite3.connect("C:/Users/utplu/Desktop/DoAnTN/dataset.db")
+    conn = sqlite3.connect("C:/Users/utplu/Desktop/DoAnTN/dataset.db") # đường dẫn nơi lưu CSDL
     query = "SELECT * FROM people WHERE ID ="+ str(id)
     cusror = conn.execute(query)
 
@@ -20,7 +20,7 @@ def insertOrUpdate(id, name):
     conn.close()
     
 #load thu vien
-fcc = c.CascadeClassifier("C:/Users/utplu/Desktop/DoAnTN/f.xml")
+fcc = c.CascadeClassifier("C:/Users/utplu/Desktop/DoAnTN/f.xml") #đường dẫn thư mục chứ tệp f.xml
 
 cap = c.VideoCapture(0)
 
@@ -55,7 +55,7 @@ while(True):
         c.imwrite('dataSet/User.' + str(id)+'.' + str(sampleNum)+'.jpg', anh_cat)
     c.imshow('frame', f)
     c.waitKey(1)
-    if sampleNum > 400:
+    if sampleNum > 400: ### số hình ảnh tối đa được thu thập 1 lần trên 1 đối tượng
         break;
 cap.release()
 c.destroyAllWindows()
