@@ -2,7 +2,8 @@ NHẬN DIỆN KHUÔN MẶT TRONG THỜI GIAN THỰC
 
 Hướng dẫn thực hiện xây dựng và khảo sát mô hình nhận diện khuôn mặt trong thời gian thực
 
-*Chương trình sử dụng cơ sở dữ liệu tự tạo. Yêu cầu môi trường Python IDLE 3.9 và ứng dụng DB Browser (SQLite).
+
+Chương trình sử dụng cơ sở dữ liệu tự tạo. Yêu cầu môi trường Python IDLE 3.9 và ứng dụng DB Browser (SQLite).
 #LINK TẢI: PYTHON 3.9: https://www.python.org/downloads/release/python-390/
                     hoặc tại cửa sổ command prompt chạy lệnh: python --version
                     hướng dẫn tại: https://www.geeksforgeeks.org/how-to-install-opencv-for-python-in-windows/
