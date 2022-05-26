@@ -9,6 +9,9 @@ LINK TẢI: PYTHON 3.9: https://www.python.org/downloads/release/python-390/
                     hướng dẫn tại: https://www.geeksforgeeks.org/how-to-install-opencv-for-python-in-windows/
           ứng dụng SQLite    : https://sqlitebrowser.org/
           
+          
+          
+          
 Cài đặt và tạo CSDL bằng SQLite có thể tham khảo tại đây: https://www.dotplays.com/android-co-ban-su-dung-sqlite-bang-phan-mem-db-browser-for-sqlite/
 Cài đặt các thư viện cần thiết cho ứng dụng Python bằng lệnh pip install trong cửa sổ Command Prompt.
 Một số thư viện cần thiết:
@@ -23,12 +26,15 @@ Cú pháp: pip install PACKAGE_NAME
       
       Thư viện để load mô hình file đuôi .h5: pip install h5py
      
-      
+ 
+ 
+ 
 Các bước thực hiện:
 1)	Khởi chạy code thu thập cơ sở dữ liệu để thu thập dữ liệu khuôn mặt.
 2)	Tách, phân loại và đặt tên các danh mục cho dữ liệu lấy từ CSDL vừa thu thập được trong tệp “DataSet” vừa tạo tại code thu thập (thực hiện thủ công).
 3)	Chạy code đào tạo. Sau khi đào tạo hoàn tất và lưu mô hình vào file .h5.
 4)	Chạy code nhận diện để kiểm tra mô hình.
+
 
 Link tải các tệp thuật toán Haar Cascade sử dụng trong mô hình: https://github.com/opencv/opencv/tree/master/data/haarcascades
  sử dụng trong chương trình này là f.xml đính kèm tương ứng với file "haarcascade_frontalface_default.xml" trong đường dẫn trên.
