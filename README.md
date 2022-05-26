@@ -4,18 +4,32 @@ Hướng dẫn thực hiện xây dựng và khảo sát mô hình nhận diện
 
 
 Chương trình sử dụng cơ sở dữ liệu tự tạo. Yêu cầu môi trường Python IDLE 3.9 và ứng dụng DB Browser (SQLite).
+
+
 LINK TẢI: PYTHON 3.9: https://www.python.org/downloads/release/python-390/
-                    hoặc tại cửa sổ command prompt chạy lệnh: python --version
+                   hoặc tại cửa sổ command prompt chạy lệnh: python --version
                     hướng dẫn tại: https://www.geeksforgeeks.org/how-to-install-opencv-for-python-in-windows/
-          ứng dụng SQLite    : https://sqlitebrowser.org/
+                    
+                    
+ứng dụng SQLite    : https://sqlitebrowser.org/
           
           
           
           
 Cài đặt và tạo CSDL bằng SQLite có thể tham khảo tại đây: https://www.dotplays.com/android-co-ban-su-dung-sqlite-bang-phan-mem-db-browser-for-sqlite/
+
+
 Cài đặt các thư viện cần thiết cho ứng dụng Python bằng lệnh pip install trong cửa sổ Command Prompt.
+
+
 Một số thư viện cần thiết:
-Cú pháp: pip install PACKAGE_NAME
+
+
+Cú pháp:
+       
+       
+      pip install PACKAGE_NAME
+
       Đối với opencv, PACKAGE_NAME có thể là:
                     opencv-python (chỉ chứa các mô-đun chính)
                     opencv-contrib-python (chứa cả mô-đun chính và mô-đun đóng góp)
